@@ -8,6 +8,7 @@
   border: 2px solid #4e5aaf;
   border-radius: 8px;
   margin: 3vw;
+  font-size: 3vw;
 }
 #title{
   width: 100%;
@@ -19,6 +20,8 @@
   width: 90%;
   margin: auto;
   margin-top: 5vw;
+  margin-bottom: 15px;
   padding: 2%;
   font-weight: bold;
+  border-radius: 15px;
 }
