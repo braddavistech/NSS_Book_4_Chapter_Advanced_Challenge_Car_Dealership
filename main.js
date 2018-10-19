@@ -1289,9 +1289,7 @@ let highMonth = 0;
 let highCount = 0;
 let profName = null;
 let profAmt = 0;
-let keeper = document.getElementById("print");
-let placeHolder = document.createElement("div");
-placeHolder.setAttribute("id", "printBlock");
+let keeper = document.getElementById("printBlock");
 let popCar = null;
 let popCount = 0;
 let popBank = null;
@@ -1431,32 +1429,31 @@ function printScreen (yearlyTotal, highCount, highMonth, salesMan, salesCount, p
   const titleBlock = document.createElement("h1");
   titleBlock.setAttribute("id", "title");  
   titleBlock.innerHTML = "2017 Production Report";
-  placeHolder.appendChild(titleBlock)
   const temp = document.createElement("p");
   temp.setAttribute("class", "mainText");  
   temp.innerHTML = "Total Profit: This year we made USD $" + yearlyTotal + ".";
-  placeHolder.appendChild(temp);
+  titleBlock.appendChild(temp);
   const temp2 = document.createElement("p");
   temp2.setAttribute("class", "mainText");  
   temp2.innerHTML = "Best Month: In " + highMonth + "/2017, we had our best month when we sold " + highCount + " cars.";
-  placeHolder.appendChild(temp2);
+  titleBlock.appendChild(temp2);
   const temp3 = document.createElement("p");
   temp3.setAttribute("class", "mainText");  
   temp3.innerHTML = "Top Salesman By Volume: " + salesMan + " sold the most cars in 2017 by selling " + salesCount + " cars.";
-  placeHolder.appendChild(temp3);
+  titleBlock.appendChild(temp3);
   const temp4 = document.createElement("p");
   temp4.setAttribute("class", "mainText");  
   temp4.innerHTML = "Top Salesman By Profit: " + profName + " made the most profit with USD $" + profAmt;
-  placeHolder.appendChild(temp4);
+  titleBlock.appendChild(temp4);
   const temp5 = document.createElement("p");
   temp5.setAttribute("class", "mainText");  
   temp5.innerHTML = "Top Selling Vehicle Model: " + popCar + " was the most popular model, selling " + popCount + " vehicles.";
-  placeHolder.appendChild(temp5);
+  titleBlock.appendChild(temp5);
   const temp6 = document.createElement("p");
   temp6.setAttribute("class", "mainText");  
   temp6.innerHTML = "Top Lending Partner: " + popBank + " provided the most loans to our customers with " + bankCount + " loans in 2017.";
-  placeHolder.appendChild(temp6);
-  keeper.appendChild(placeHolder);
+  titleBlock.appendChild(temp6);
+  keeper.appendChild(titleBlock)
 };
 
 
